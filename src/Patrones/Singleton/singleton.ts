@@ -1,6 +1,13 @@
+
+interface Equipo {
+    nombre: string, 
+    tipo: string, 
+    estado: string 
+}
+
 export class Inventario {
     private static instancia: Inventario;
-    private equipo: { nombre: string, tipo: string, estado: string } = { nombre: "", tipo: "", estado: "" };
+    private equipo: Equipo = { nombre: "", tipo: "", estado: "" };
 
     constructor() {}
 
@@ -15,7 +22,7 @@ export class Inventario {
         this.equipo = { nombre: nombre, tipo: tipo, estado: estado };
     }
 
-    public listarEquipo(): { nombre: string, tipo: string, estado: string } {
+    public listarEquipo(): Equipo {
         return this.equipo;
     }
 
