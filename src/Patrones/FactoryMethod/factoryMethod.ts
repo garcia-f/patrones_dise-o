@@ -1,9 +1,6 @@
 
 interface Equipo {
-    tipo: string,
-    nombre: string;
-    ram: string;
-    procesador: string;
+    detalles(): string;
 }
 
 class Notebook implements Equipo {
